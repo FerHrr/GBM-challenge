@@ -120,7 +120,6 @@ const ReactiveAccountsView: React.FC<Props> = ({
             </Grid>
           </div>
         </ModalComponent>
-        ReactiveAccountsView
         <TableComponent columns={columns} rows={rows} />
       </>
     </ContainerComponent>
