@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Challenge GBM
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esté es un proyecto que fue creado para el reto GBM el cual consta de mostrar información general en su vista `/home`. Al momento de ser un usuario registrado podrás tener acceso a información privada.
 
-## Available Scripts
+Al contar con un acceso, se podrá contar con diferentes **Roles** los cuales son:
 
-In the project directory, you can run:
+* **Usuario:** La cuenta con este Rol solo podrá tener acceso a la parte de analiticos.
+* **Administrator:** La cuenta con este Rol podrá tener acceso a los analiticos y también a poder reactivar las cuentas que fueron bloquedas por intentar iniciar sesión mas de 3 veces sin colocar correctamente su contraseña. 
+* **Owner:** La cuenta con este Rol tendrá acceso a los analiticos, reactivar cuentas y también podrá cambiar el tipo de Rol para las cuentas que se encuentran registradas.
+
+
+# Introducción a la aplicación Create React App
+
+## Scripts disponibles
+
+En el directorio raíz del proyecto, puede ejecutar para iniciar el proyecto localmente:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Ejecuta la aplicación en el modo de desarrollo. \
+Abra [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+# Vistas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La aplicación cuenta diferentes vistas:
 
-### `yarn build`
+* **Home:** La cuenta con este Rol solo podrá tener acceso a la parte de analiticos.
+* * **Home con sesión iniciada:** La cuenta con este Rol solo podrá tener acceso a la parte de analiticos.
+* **Perfil:** Aqui se mostrara la información de la cuenta del usuario donde podre actualizar su nombre de usuario.
+* **Analiticos:** Muestra las gráficas con respecto al IPC.
+* **Reactivación de cuentas:** Muestra una tabla con la lista de usuario con su cuenta bloqueada.
+* **Control de Roles:** Muestra una tabla con los usuarios registrados donde se podra modificar el Rol con el que cuentan.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Información tecnica
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Está aplicación fue desarrollada con:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **React JS**
+* **Typescript**
+* **CSS**
+* **Firebase**
+* **Material UI**
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
