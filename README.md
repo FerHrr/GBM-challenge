@@ -29,14 +29,14 @@ Abra [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
 
 La aplicación cuenta diferentes vistas:
 
-* **Home:** La cuenta con este Rol solo podrá tener acceso a la parte de analiticos.
-* * **Home con sesión iniciada:** La cuenta con este Rol solo podrá tener acceso a la parte de analiticos.
-* **Perfil:** Aqui se mostrara la información de la cuenta del usuario donde podre actualizar su nombre de usuario.
+* **Home:** La cuenta con este Rol solo podrá tener acceso a la parte de analíticos.
+* * **Home con sesión iniciada:** La cuenta con este Rol solo podrá tener acceso a la parte de analíticos.
+* **Perfil:** Aquí se mostrara la información de la cuenta del usuario donde podre actualizar su nombre de usuario.
 * **Analiticos:** Muestra las gráficas con respecto al IPC.
 * **Reactivación de cuentas:** Muestra una tabla con la lista de usuario con su cuenta bloqueada.
-* **Control de Roles:** Muestra una tabla con los usuarios registrados donde se podra modificar el Rol con el que cuentan.
+* **Control de Roles:** Muestra una tabla con los usuarios registrados donde se podrá modificar el Rol con el que cuentan.
 
-# Información tecnica
+# Información técnica
 
 Está aplicación fue desarrollada con:
 
