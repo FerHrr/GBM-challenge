@@ -47,6 +47,7 @@ const MenuAppBar = () => {
     boxShadow: 24,
     p: 4,
     borderRadius: "20px",
+    // height: "100%",
   };
 
   useEffect(() => {

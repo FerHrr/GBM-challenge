@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
 import {
   Alert,
@@ -15,7 +15,6 @@ import {
 import { MessagesError } from "./interface";
 import useStyles from "./style";
 import { doSignUp } from "./service";
-import { UserContext } from "../../Context/userContext";
 interface Props {
   handleCloseModal: () => void;
 }
@@ -73,16 +72,6 @@ const SignupComponent: React.FC<Props> = ({ handleCloseModal }) => {
         display: true,
       });
     }
-    // handleCloseModal();
-
-    // signInWithEmailAndPassword(fbAuth, username, pass)
-    //           .then(res => {
-    //               window.location.href = "/"
-    //           })
-    //           .catch(err => {
-    //           String(err).includes('Error (auth/user-not-found)')&&setMessageError({message:'Usuario o contraseña incorrecto',display:true})
-    //               console.log(err)
-    //           })
   };
 
   const classes = useStyles();
@@ -127,7 +116,7 @@ const SignupComponent: React.FC<Props> = ({ handleCloseModal }) => {
           component={"h1"}
           className={classes.tituloSesion}
         >
-          SignUp
+          Registrarse
         </Typography>
       </Grid>
       <Grid item style={{ marginBottom: "20px" }}>

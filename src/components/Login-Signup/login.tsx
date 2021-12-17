@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import React, { useState, useEffect, useContext } from "react";
 import { MessagesError } from "./interface";
-import { blockedUser, isBlocked, isUser, login } from "./service";
+import { blockedUser, login } from "./service";
 import useStyles from "./style";
 import { UserContext } from "../../Context/userContext";
 interface Props {
@@ -67,14 +67,6 @@ const LoginComponent: React.FC<Props> = ({ handleCloseModal }) => {
         display: true,
       });
     }
-    // else
-    // {
-    //   setMessageError({
-    //     message:
-    //       "",
-    //     display: false,
-    //   });
-    // }
   }, [isUserBlocked]);
 
   useEffect(() => {
@@ -82,19 +74,12 @@ const LoginComponent: React.FC<Props> = ({ handleCloseModal }) => {
   }, [messageError]);
 
   const handleLogin = async () => {
-    // let isUsr = await isUser();
-    // if (isUsr) {
-    // let userBlocked = await isBlocked(mail);
-    // setIsUserBlocked(userBlocked);
-    // if (!userBlocked) {
     let res: MessagesError = (await login(
       mail,
       pass,
       opportunities
     )) as MessagesError;
     if (res.message === "") {
-      // let userBlocked = await isBlocked(mail);
-      // setIsUserBlocked(userBlocked);
     } else {
       setMessageError({
         message: res.message,
@@ -103,30 +88,6 @@ const LoginComponent: React.FC<Props> = ({ handleCloseModal }) => {
     }
 
     res?.count && setOpportunities(res?.count);
-    // }
-
-    // } else {
-    //   setMessageError({
-    //     message: "El correo no se encuentra registrado",
-    //     display: true,
-    //   });
-    // }
-    // if (res < 3) {
-    //   setOpportunities(res);
-    // }
-
-    // else {
-    //   // handleCloseModal();
-    // }
-
-    // signInWithEmailAndPassword(fbAuth, username, pass)
-    //           .then(res => {
-    //               window.location.href = "/"
-    //           })
-    //           .catch(err => {
-    //           String(err).includes('Error (auth/user-not-found)')&&setMessageError({message:'Usuario o contraseña incorrecto',display:true})
-    //               console.log(err)
-    //           })
   };
 
   const classes = useStyles();
@@ -180,14 +141,6 @@ const LoginComponent: React.FC<Props> = ({ handleCloseModal }) => {
               {messageError.message}
             </Typography>
           )}
-        {/* {messageError.display &&
-          !messageError.message.includes(
-            "Tu cuenta se encuentra bloqueada, espera a que un Administrador la active nuevamente."
-          ) && (
-            <Typography variant="body2" className={classes.messageErrorEmail}>
-              {messageError.message}
-            </Typography>
-          )} */}
       </Grid>
       <Grid item style={{ marginBottom: "20px" }}>
         <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
@@ -217,25 +170,7 @@ const LoginComponent: React.FC<Props> = ({ handleCloseModal }) => {
         </FormControl>
       </Grid>
 
-      <Grid
-        item
-        container
-        justifyContent="space-between"
-        // className={classes.containerButtons}
-      >
-        {/* <Grid item> */}
-        {/* {(messageError.display &&
-          !isUserBlocked &&
-          messageError.message.includes("encuentra")) ||
-          (messageError.message.includes("ha sido") && (
-            <Grid item className={classes.messageErrorLogin}>
-              <Typography variant="body2" className={classes.messageErrorEmail}>
-                {messageError.message}
-              </Typography>
-            </Grid>
-          ))} */}
-        {/* </Grid> */}
-
+      <Grid item container justifyContent="space-between">
         <Grid item style={{ width: "100%" }}>
           {isUserBlocked ? (
             <>
