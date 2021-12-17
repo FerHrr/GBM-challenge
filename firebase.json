@@ -1,0 +1,62 @@
+{
+  "hosting": [
+    {
+      "site": "gbm-challenge-ipc",
+      "public": "build",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-store"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src wss: https: 'self' 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+            },
+            {
+              "key": "Expect-CT",
+              "value": "max-age=86400, enforce"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "geolocation=(self), microphone=()"
+            },
+            {
+              "key": "Feature-Policy",
+              "value": "geolocation 'self'; microphone 'none'"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=31536000; includeSubDomains"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "X-Xss-Protection",
+              "value": "1; mode=block"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
