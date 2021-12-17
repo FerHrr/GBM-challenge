@@ -13,9 +13,9 @@ Al contar con un acceso, se podrá contar con diferentes **Roles** los cuales so
 
 ## Scripts disponibles
 
-En el directorio raíz del proyecto, puede ejecutar para iniciar el proyecto localmente:
+Para descargar todos los modulos requeridos para la ejecución de la aplicación en entorno local, en el directorio raíz del proyecto, puede ejecutarel comando:
 
-### `yarn start`
+### `yarn`
 
 Ejecuta la aplicación en el modo de desarrollo. \
 Abra [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
