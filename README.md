@@ -17,6 +17,10 @@ Para descargar todos los modulos requeridos para la ejecución de la aplicación
 
 ### `yarn`
 
+Para iniciar el proyecto localmente, en el directorio raíz del proyecto ejecute el comando:
+
+### `yarn start`
+
 Ejecuta la aplicación en el modo de desarrollo. \
 Abra [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
 
