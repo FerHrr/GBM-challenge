@@ -1,0 +1,7 @@
+const hi=()=>{
+
+}
+
+export{
+   hi,
+}
